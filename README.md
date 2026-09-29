@@ -41,42 +41,44 @@
 
 ## Структура проекта
 
+```
 mmanager/
 ├── CMakeLists.txt
 ├── README.md
 ├── .gitignore
 │
 ├── third_party/
-│ ├── sqlite/ амальгамация SQLite (sqlite3.c, sqlite3.h)
-│ └── picosha2/ SHA-256, один заголовок
+│   ├── sqlite/               амальгамация SQLite (sqlite3.c, sqlite3.h)
+│   └── picosha2/             SHA-256, один заголовок
 │
 ├── src/
-│ ├── main.cpp точка входа
-│ ├── Models.hpp структуры данных (Band, Concert, ...)
-│ │
-│ ├── db/ слой доступа к данным
-│ │ ├── Database.* RAII-обёртка над sqlite3*
-│ │ ├── Statement.* RAII-обёртка над sqlite3_stmt*
-│ │ └── Migration.* создание таблиц, seed ролей
-│ │
-│ ├── services/ бизнес-логика
-│ │ ├── AuthService.* авторизация, пользователи
-│ │ ├── CatalogService.* группы, музыканты, площадки
-│ │ ├── ConcertService.* концерты
-│ │ └── ContractService.* договоры
-│ │
-│ ├── ui/ интерфейс FLTK
-│ │ ├── App.* состояние приложения, event loop
-│ │ ├── Windows.* окна входа и главное
-│ │ ├── Panels.* панели разделов (списки + CRUD)
-│ │ └── Modals.* модальные окна форм и деталей
-│ │
-│ └── util/
-│ ├── Hash.* генерация соли, SHA-256
-│ ├── Date.* текущая дата
-│ └── Status.* перевод статусов RU ↔ EN
+│   ├── main.cpp              точка входа
+│   ├── Models.hpp            структуры данных (Band, Concert, ...)
+│   │
+│   ├── db/                   слой доступа к данным
+│   │   ├── Database.*        RAII-обёртка над sqlite3*
+│   │   ├── Statement.*       RAII-обёртка над sqlite3_stmt*
+│   │   └── Migration.*       создание таблиц, seed ролей
+│   │
+│   ├── services/             бизнес-логика
+│   │   ├── AuthService.*     авторизация, пользователи
+│   │   ├── CatalogService.*  группы, музыканты, площадки
+│   │   ├── ConcertService.*  концерты
+│   │   └── ContractService.* договоры
+│   │
+│   ├── ui/                   интерфейс FLTK
+│   │   ├── App.*             состояние приложения, event loop
+│   │   ├── Windows.*         окна входа и главное
+│   │   ├── Panels.*          панели разделов (списки + CRUD)
+│   │   └── Modals.*          модальные окна форм и деталей
+│   │
+│   └── util/
+│       ├── Hash.*            генерация соли, SHA-256
+│       ├── Date.*            текущая дата
+│       └── Status.*          перевод статусов RU ↔ EN
 │
-└── tests/ (заготовка под тесты)
+└── tests/                    (заготовка под тесты)
+```
 
 ## Сборка
 
