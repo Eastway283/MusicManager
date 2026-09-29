@@ -1,0 +1,30 @@
+# Директория сборки CMake
+build/
+
+# База данных SQLite и её журналы
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Симлинк на compile_commands.json
+compile_commands.json
+
+# Кэш clangd
+.cache/
+
+# Файлы редакторов
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Артефакты сборки
+*.o
+*.a
+*.so
+*.exe
+
+# Логи и временные файлы
+*.log
+*.tmp
