@@ -140,7 +140,7 @@ void MainWindow::showPanel(PanelType type) {
             break;
         case PanelType::Concerts:
             current_widget_ = new ConcertPanel(0, 25, 800, 575, app_);
-        break;
+            break;
         case PanelType::Contracts:
             current_widget_ = new ContractPanel(0, 25, 800, 575, app_);
             break;
