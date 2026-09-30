@@ -132,7 +132,6 @@ void MainWindow::showPanel(PanelType type) {
         case PanelType::Bands:
             current_widget_ = new BandPanel(0, 25, 800, 575, app_);
             break;
-    // остальные пока заглушки:
         case PanelType::Musicians:
             current_widget_ = new MusicianPanel(0, 25, 800, 575, app_);
             break;
